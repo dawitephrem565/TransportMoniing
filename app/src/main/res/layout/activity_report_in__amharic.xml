@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dev.transportmoniing.Report_in_Amharic"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="እባክሆን የመኪናውን ታርጋ ያስገቡ"
+        android:textSize="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="30dp"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:id="@+id/licencePlate"
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ያስገቡ"
+        android:textSize="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="5dp"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:id="@+id/adress"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ምን እንርዳዎ ?"
+
+        android:textSize="16dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ያላግባብ መስተናገድ "
+        android:paddingLeft="10dp"
+        android:id="@+id/alagbab_mestnaged"
+        android:layout_marginTop="20dp"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="የታሪፍ ማጭበርበር "
+        android:paddingLeft="10dp"
+        android:id="@+id/Ytarifemachbrebre" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="ፍጥነት መጨመር"
+        android:id="@+id/fetntmchmer" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="ጠጥቶ ማሽከርከር"
+        android:id="@+id/ttetomashkrker" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="በቅርብ ያለአደጋ"
+        android:paddingLeft="10dp"
+        android:id="@+id/bqerebeyaladga" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:layout_marginTop="15dp"
+        android:text="ሪፖርት"
+        android:id="@+id/report"
+
+        android:background="@color/colorAccent"
+
+        />
+
+</LinearLayout>

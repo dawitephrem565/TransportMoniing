@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context="com.example.dev.transportmoniing.MainActivity"
+    >
+    <item
+        android:id="@+id/English"
+        android:orderInCategory="100"
+        android:title="English"
+        android:icon="@drawable/google"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Oromifa"
+        android:orderInCategory="100"
+        android:title="English"
+        android:icon="@drawable/google"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Amharic"
+        android:orderInCategory="100"
+        android:title="English"
+        android:icon="@drawable/google"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/citytaxi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="173dp"
+        android:layout_marginStart="29dp"
+        android:clickable="true"
+        app:backgroundTint="#4ccf28"
+        app:srcCompat="@drawable/citytaxi" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/citybus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/citytaxi"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        app:backgroundTint="#3e3d4d"
+        app:srcCompat="@drawable/citybus" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/countrybus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/citytaxi"
+        android:layout_marginEnd="28dp"
+        android:clickable="true"
+        app:backgroundTint="#ffce"
+        app:srcCompat="@drawable/countrybus" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/citytaxi"
+        android:layout_marginBottom="74dp"
+        android:clickable="true"
+        app:backgroundTint="#dcdc43"
+        app:srcCompat="@drawable/order" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/citytrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/order"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        app:backgroundTint="#ffac"
+        app:srcCompat="@drawable/train" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/countrybus"
+        android:layout_alignTop="@+id/order"
+        android:clickable="true"
+        app:srcCompat="@drawable/alarm" />
+
+    <TextView
+        android:id="@+id/Citytaxi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/citytaxi"
+        android:layout_marginBottom="146dp"
+        android:text="City Taxi" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/Citytaxi"
+        android:layout_centerHorizontal="true"
+        android:text="City Bus" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/Citytaxi"
+        android:layout_marginEnd="20dp"
+        android:text="Country Bus" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/citytaxi"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="43dp"
+        android:text="Other Taxi" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:text="City Train" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/order"
+        android:layout_alignTop="@+id/textView4"
+        android:text="Report" />
+</RelativeLayout>

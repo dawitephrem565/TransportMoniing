@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:id="@+id/placerow"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="መነሻ"
+            android:id="@+id/start"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="100dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="መድረሻ"
+            android:id="@+id/end"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="30dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/placerow"
+        android:orientation="horizontal"
+
+
+        android:paddingLeft="10dp"
+        android:id="@+id/textfieldsrow"
+        >
+        <AutoCompleteTextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/Tsed"
+            android:maxLines="1"
+            />
+        <AutoCompleteTextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:id="@+id/Teed"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout6"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="0dp"
+
+        android:layout_marginTop="180dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="በመሃልያሉ ባታዎች"
+            android:paddingLeft="30dp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/textView15" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="ኪሜ"
+            android:id="@+id/textView18"
+            android:layout_marginTop="8dp"
+
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="60dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="ታሪፍ"
+            android:id="@+id/textView19"
+            android:layout_marginTop="8dp"
+
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="70dp"
+
+            />
+
+
+
+    </LinearLayout>
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/linearLayout6"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="0dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/tableLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/Tplace1"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="0"
+                android:text="Medium Text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="500"
+                android:id="@+id/TKm1"
+                android:layout_column="92"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ብር"
+                android:id="@+id/TPrice1"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"
+                android:layout_column="93" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:paddingLeft="30dp"
+                android:id="@+id/Tplace2"
+                android:layout_marginTop="10dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="500"
+                android:id="@+id/TKm2"
+                android:layout_column="92"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ብር"
+                android:id="@+id/TPrice2"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"
+                android:layout_column="93" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/Tplace3"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="500"
+                android:id="@+id/TKm3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp"
+                android:layout_column="92" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ብር"
+                android:id="@+id/TPrice3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"
+                android:layout_column="93" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:paddingLeft="30dp"
+                android:id="@+id/Tplace4"
+                android:layout_marginTop="10dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="500"
+                android:id="@+id/TKm4"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp"
+                android:layout_column="92" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ብር"
+                android:id="@+id/TPrice4"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"
+                android:layout_column="93" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/Tplace5"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="500"
+                android:id="@+id/TKm5"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp"
+                android:layout_column="92" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ብር"
+                android:layout_marginLeft="70dp"
+                android:id="@+id/TPrice5"
+                android:layout_marginTop="10dp"
+                android:layout_column="93" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/Tplace6"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="500"
+                android:id="@+id/TKm6"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp"
+                android:layout_column="92" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ብር"
+                android:layout_marginTop="10dp"
+                android:id="@+id/TPrice6"
+                android:layout_marginLeft="70dp"
+                android:layout_column="93" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/Tplace7"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="500"
+                android:id="@+id/TKm7"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp"
+                android:layout_column="92" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ብር"
+                android:id="@+id/TPrice7"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"
+                android:layout_column="93" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/Tplace8"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="500"
+                android:id="@+id/TKm8"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp"
+                android:layout_column="92" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ብር"
+                android:id="@+id/TPrice8"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"
+                android:layout_column="93" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/Tplace9"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="500"
+                android:id="@+id/TKm9"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="92" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ብር"
+                android:id="@+id/TPrice9"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="93" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/Tplace10"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="30dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="500"
+                android:id="@+id/Km10"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="92" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1ብር"
+                android:id="@+id/TPrice10"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"
+                android:layout_column="93" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="380dp"
+        android:text="አሳይ"
+        android:textAlignment="center"
+
+        android:background="@color/colorAccent"
+        android:textColor="#FFFFFF"
+        android:paddingBottom="10dp"
+        android:id="@+id/serach"
+        />
+
+
+</RelativeLayout>
