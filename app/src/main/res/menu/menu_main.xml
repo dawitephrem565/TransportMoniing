@@ -13,13 +13,13 @@
     <item
         android:id="@+id/Oromifa"
         android:orderInCategory="100"
-        android:title="English"
+        android:title="Oromifa"
         android:icon="@drawable/google"
         app:showAsAction="never" />
     <item
         android:id="@+id/Amharic"
         android:orderInCategory="100"
-        android:title="English"
+        android:title="Amharic"
         android:icon="@drawable/google"
         app:showAsAction="never" />
 

@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:paddingLeft="10dp"
-        android:text=""
+        android:text="ስልክ"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
 

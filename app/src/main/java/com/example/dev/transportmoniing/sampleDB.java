@@ -58,40 +58,41 @@ import java.util.Map;
 
 public class sampleDB extends AppCompatActivity {
     Button repo;
-    TextView result ,lati , log ,lictv , phontv,tarifftv,fetnttv,tetotv,adgotv;
-    EditText phone,email,licenplate;
+    TextView result, lati, log, lictv, phontv, tarifftv, fetnttv, tetotv, adgotv;
+    EditText phone, email, licenplate;
     RequestQueue requestQueue;
     String insertUrl = "http://192.168.137.1/super/Super%20Admin/Subadmin/mobil.php";
-    String showUrl =  "http://192.168.137.1/super/studmobile.php " ;
-          //http://192.168.137.1/PHPE/showStudents.php";
+    String showUrl = "http://192.168.137.1/super/studmobile.php ";
+    //http://192.168.137.1/PHPE/showStudents.php";
     CheckBox fetntmchmer, tettomashkerker, bkerbyaladega, tarifmachberber, yalagbabmastnaged;
 
 
-LocationManager locationManager;
-LocationListener listener;
+    LocationManager locationManager;
+    LocationListener listener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample_db);
         getSupportActionBar().setHomeButtonEnabled(true);
-        repo = (Button)findViewById(R.id.report);
-        phone=(EditText) findViewById(R.id.phone);
-        email=(EditText) findViewById(R.id.adress);
-        licenplate=(EditText)findViewById(R.id.licencePlate);
-        lati = (TextView)findViewById(R.id.loed);
-        log =(TextView)findViewById(R.id.lad);
+        repo = (Button) findViewById(R.id.report);
+        phone = (EditText) findViewById(R.id.phone);
+        email = (EditText) findViewById(R.id.adress);
+        licenplate = (EditText) findViewById(R.id.licencePlate);
+        lati = (TextView) findViewById(R.id.loed);
+        log = (TextView) findViewById(R.id.lad);
         fetntmchmer = (CheckBox) findViewById(R.id.fetntmchmer);
         tettomashkerker = (CheckBox) findViewById(R.id.ttetomashkrker);
         bkerbyaladega = (CheckBox) findViewById(R.id.bqerebeyaladga);
         tarifmachberber = (CheckBox) findViewById(R.id.Ytarifemachbrebre);
         yalagbabmastnaged = (CheckBox) findViewById(R.id.alagbab_mestnaged);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        lictv = (TextView)findViewById(R.id.licensetexttv);
-        phontv = (TextView)findViewById(R.id.licensetexttv);
-        tarifftv=(TextView)findViewById(R.id.tariifTv) ;
-        fetnttv=(TextView)findViewById(R.id.fetnetTv) ;
-        tetotv=(TextView)findViewById(R.id.tariifTv) ;
-        adgotv=(TextView)findViewById(R.id.adgaTv) ;
+        lictv = (TextView) findViewById(R.id.licensetexttv);
+        phontv = (TextView) findViewById(R.id.phonetv);
+        tarifftv = (TextView) findViewById(R.id.tariifTv);
+        fetnttv = (TextView) findViewById(R.id.fetnetTv);
+        tetotv = (TextView) findViewById(R.id.tariifTv);
+        adgotv = (TextView) findViewById(R.id.adgaTv);
 
         listener = new LocationListener() {
             @Override
@@ -122,7 +123,7 @@ LocationListener listener;
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
+        switch (requestCode) {
             case 1:
                 configure_button();
                 break;
@@ -131,23 +132,32 @@ LocationListener listener;
         }
     }
 
-    void configure_button(){
+    void configure_button() {
         // first check for permissions
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.INTERNET}
-                        ,1);
+                requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.INTERNET}
+                        , 1);
             }
             return;
         }
-
 
 
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         repo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             //  locationManager.requestLocationUpdates("gps", 1000, 0, listener);
+                if (ActivityCompat.checkSelfPermission(sampleDB.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(sampleDB.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
+                locationManager.requestLocationUpdates("gps", 1000, 0, listener);
           //      Toast.makeText(sampleDB.this,"hre we are !",Toast.LENGTH_LONG).show();
 
 
@@ -170,15 +180,74 @@ LocationListener listener;
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String,String> parameters  = new HashMap<String, String>();
 //
-                        parameters.put("Licence_plate",licenplate.getText().toString());
-                        parameters.put("Area", "Robe");
-                        parameters.put("Reason", "Speed");
-                        parameters.put("Phone",phone.getText().toString());
-                        parameters.put("Longtuid",lati.getText().toString());
-                        parameters.put("Longtuid",lati.getText().toString());
-                        String roota  = fetntmchmer.getText().toString() + "" + tettomashkerker.getText().toString() +"" + bkerbyaladega.getText().toString() + "" + tarifmachberber.getText().toString()+"" + yalagbabmastnaged.getText().toString();
+                       // parameters.put("Licence_plate",licenplate.getText().toString());
+                        //parameters.put("Area", "Robe");
+                        //String roota  = fetntmchmer.getText().toString() + "" + tettomashkerker.getText().toString() +"" + bkerbyaladega.getText().toString() + "" + tarifmachberber.getText().toString()+"" + yalagbabmastnaged.getText().toString();
+if(fetntmchmer.isChecked()) {
+    parameters.put("Licence_plate", licenplate.getText().toString());
+    parameters.put("Area", "Robe");
+    parameters.put("Reason", fetntmchmer.getText().toString());
+    parameters.put("Phone", email.getText().toString());
+    parameters.put("Longtuid", "00.2");
+    parameters.put("Latitude", "0032.2.45");
+}
+else if(yalagbabmastnaged.isChecked()){
 
-                        //Toast.makeText(Report.this,"Data insertttt",Toast.LENGTH_LONG).show();
+    parameters.put("Licence_plate", licenplate.getText().toString());
+    parameters.put("Area", "Robe");
+    parameters.put("Reason", yalagbabmastnaged.getText().toString());
+    parameters.put("Phone", email.getText().toString());
+    parameters.put("Longtuid", "00.2");
+    parameters.put("Latitude", "0032.2.45");
+}
+else if (tarifmachberber.isChecked())
+{
+    parameters.put("Licence_plate", licenplate.getText().toString());
+    parameters.put("Area", "Robe");
+    parameters.put("Reason", tarifmachberber.getText().toString());
+    parameters.put("Phone", email.getText().toString());
+    parameters.put("Longtuid", "00.2");
+    parameters.put("Latitude", "0032.2.45");
+
+
+}
+                        else if (yalagbabmastnaged.isChecked()&& tarifmachberber.isChecked())
+{
+
+    parameters.put("Licence_plate", licenplate.getText().toString());
+    parameters.put("Area", "Robe");
+    parameters.put("Reason", tarifmachberber.getText().toString() +"  " + yalagbabmastnaged.getText().toString());
+    parameters.put("Phone", email.getText().toString());
+    parameters.put("Longtuid", "00.2");
+    parameters.put("Latitude", "0032.2.45");
+}
+else if (tettomashkerker.isChecked())
+{
+
+    parameters.put("Licence_plate", licenplate.getText().toString());
+    parameters.put("Area", "Robe");
+    parameters.put("Reason", tettomashkerker.getText().toString());
+    parameters.put("Phone", email.getText().toString());
+    parameters.put("Longtuid", "00.2");
+    parameters.put("Latitude", "0032.2.45");
+
+}
+else if (tettomashkerker.isChecked()&& fetntmchmer.isChecked())
+{
+
+    parameters.put("Licence_plate", licenplate.getText().toString());
+    parameters.put("Area", "Robe");
+    parameters.put("Reason", tettomashkerker.getText().toString() +"  " + fetntmchmer.getText().toString());
+    parameters.put("Phone", email.getText().toString());
+    parameters.put("Longtuid", "00.2");
+    parameters.put("Latitude", "0032.2.45");
+}
+else
+{
+
+    Toast.makeText(sampleDB.this,"እባኮን ደግመው በትክክል ያሰገቡ",Toast.LENGTH_LONG).show();
+}
+   //Toast.makeText(Report.this,"Data insertttt",Toast.LENGTH_LONG).show();
 
                             // parameters.put("Age",age.getText().toString());
 

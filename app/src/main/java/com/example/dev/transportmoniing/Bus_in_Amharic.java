@@ -154,6 +154,65 @@ public class Bus_in_Amharic extends AppCompatActivity {
                     });
                     requestQueue.add(jsonObjectRequest);
                 }
+                else if(BeditText.getText().toString().equals("Kera") && EeditText.getText().toString().equals("Awrobister"))
+
+                {
+
+                    JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
+                            showUrl, new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            System.out.println(response.toString());
+                            try {
+
+                                JSONArray students = response.getJSONArray("businfo_tms");
+
+                                for (int i = 0; i < students.length(); i++) {
+                                    JSONObject student = students.getJSONObject(i);
+
+                                    String Bs = student.getString("From");
+                                    String Be = student.getString("To");
+                                    String Bn = student.getString("Km");
+                                    String Bp = student.getString("Tariff");
+
+                                    //  String CBTarif = student.getString("Tarif");
+
+                                    //  String age = student.getString("Age");
+
+                                    Bstart.setText(Bs);
+                                    Bend.setText(Be);
+                                    Bnumber.setText(Bn);
+                                    Bprice.setText(Bp);
+                                    Bkm.setText(Bn);
+
+                                    //how are you
+                                }
+
+
+                            } catch (JSONException e) {
+
+                                Bstart.setText("መ.ባስተራ");
+                                Bend.setText("አክሱም ሆቴል");
+                                Bnumber.setText("11");
+                                Bprice.setText("2");
+                                Bkm.setText("5 ኪሜ");
+                            }
+
+                        }
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            System.out.append(error.getMessage());
+                            Toast.makeText(Bus_in_Amharic.this, "Please check Your Internet Connection", Toast.LENGTH_LONG).show();
+                            Bstart.setText("መ.ባስተራ");
+                            Bend.setText("አክሱም ሆቴል");
+                            Bnumber.setText("11");
+                            Bprice.setText("2");
+                            Bkm.setText("5 ኪሜ");
+                        }
+                    });
+                    requestQueue.add(jsonObjectRequest);
+                }
             }
             });
         }

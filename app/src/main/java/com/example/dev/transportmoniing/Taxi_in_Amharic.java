@@ -288,6 +288,23 @@ public class Taxi_in_Amharic extends AppCompatActivity {
 
             return true;
         }
+        if(id==R.id.Amharic)
+        {
+            start.setText("መነሻ");
+            end.setText("መድረሻ");
+            tarif.setText(" ታሪፍ");
+            km.setText("ኪሜ");
+            middleplaces.setText("በመሃል ያሉ ቦታዎች");
+        }
+        else if (id==R.id.Oromifa)
+        {
+            start.setText("");
+            end.setText("");
+            tarif.setText("");
+            km.setText("");
+            middleplaces.setText("");
+
+        }
 
         return super.onOptionsItemSelected(item);
     }
